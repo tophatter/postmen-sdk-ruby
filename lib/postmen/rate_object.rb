@@ -12,7 +12,7 @@ class Postmen
     attribute :booking_cut_off, Types::Date
     attribute :delivery_date, Types::String
     attribute :transit_time, Types::String
-    attribute :detailed_charges, Types::Array.member(Types::DetailedCharges)
+    attribute :detailed_charges, Types::Array.of(Types::DetailedCharges)
     attribute :info_message, Types::String
     attribute :error_message, Types::String
   end

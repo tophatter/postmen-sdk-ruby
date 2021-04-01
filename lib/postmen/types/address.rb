@@ -4,8 +4,6 @@ class Postmen
     #
     # @see https://docs.postmen.com/api.html#address API Documentation
     class Address < Dry::Struct
-      constructor_type :strict_with_defaults
-
       attribute :country, Types::Country
       attribute :contact_name, Types::String.optional.default(nil)
       attribute :phone, Types::String.optional.default(nil)

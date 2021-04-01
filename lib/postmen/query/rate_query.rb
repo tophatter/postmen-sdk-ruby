@@ -6,8 +6,6 @@ class Postmen
     # example value: 2017-02-08T10:17:04+01:00
     DATE_FORMAT = '%FT%T%:z'.freeze
 
-    constructor_type :schema
-
     attribute :status, Types::Strict::Nil | Types::RateStatuses
     attribute :limit, Types::String.optional
     attribute :created_at_min, Types::DateTime.maybe

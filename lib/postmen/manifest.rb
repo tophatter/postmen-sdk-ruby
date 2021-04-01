@@ -6,7 +6,7 @@ class Postmen
     attribute :id, Types::UUID
     attribute :status, Types::ManifestStatuses
     attribute :shipper_account, Types::Reference
-    attribute :labels, Types::Array.member(Types::ManifestingLabel)
+    attribute :labels, Types::Array.of(Types::ManifestingLabel)
     attribute :files, Types::File
     attribute :created_at, Types::DateTime
     attribute :updated_at, Types::DateTime

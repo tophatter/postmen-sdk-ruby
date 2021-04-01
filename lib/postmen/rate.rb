@@ -6,7 +6,7 @@ class Postmen
   class Rate < Dry::Struct
     attribute :id, Types::UUID
     attribute :status, Types::RateStatuses
-    attribute :rates, Types::Array.member(RateObject)
+    attribute :rates, Types::Array.of(RateObject)
 
     # Returns all rates
     #

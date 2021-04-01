@@ -3,8 +3,6 @@ class Postmen
   # creating a ShipperAccount. It does type convertion, removes empty values and so on.
   # @see ShipperAccountCollection#create Usage
   class CreateShipperAccountQuery < Dry::Struct
-    constructor_type :schema
-
     attribute :slug, Types::String
     attribute :description, Types::String
     attribute :address, Types::Address

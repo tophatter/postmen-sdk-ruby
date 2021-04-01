@@ -13,8 +13,6 @@ class Postmen
     # example value: 2017-02-08T10:17:04+01:00
     DATE_FORMAT = '%FT%T%:z'.freeze
 
-    constructor_type :schema
-
     attribute :shipper_account_id, Types::String.optional
     attribute :status, Types::Strict::Nil | Types::ManifestStatuses
     attribute :limit, Types::String.optional

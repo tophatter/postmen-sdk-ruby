@@ -3,11 +3,9 @@ class Postmen
   #
   # @see https://docs.postmen.com/api.html#shipment API documentation
   class Shipment < Dry::Struct
-    constructor_type :strict_with_defaults
-
     attribute :ship_from, Types::Address
     attribute :ship_to, Types::Address
-    attribute :parcels, Types::Array.member(Parcel)
+    attribute :parcels, Types::Array.of(Parcel)
 
     # Converts object to hash
     # @return [Hash]

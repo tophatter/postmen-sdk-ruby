@@ -3,10 +3,8 @@ class Postmen
     # Item - element of shippment
     # @see https://docs.postmen.com/api.html#item API Documentation
     class Item < Dry::Struct
-      constructor_type :schema
-
       attribute :description, Types::String
-      attribute :quantity, Types::Int
+      attribute :quantity, Types::Integer
       attribute :price, Types::Money
       attribute :weight, Types::Weight
       attribute :item_id, Types::String

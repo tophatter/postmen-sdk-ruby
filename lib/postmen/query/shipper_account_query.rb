@@ -2,10 +2,8 @@ class Postmen
   # This class holds all the logic behind querying for a single ShipperAccount.
   # @see ShipperAccountCollection.find Usage
   class ShipperAccountQuery < Dry::Struct
-    constructor_type :schema
-
     attribute :slug, Types::String
-    attribute :limit, Types::Int
+    attribute :limit, Types::Integer
     attribute :next_token, Types::String
 
     # Converts query object to hash

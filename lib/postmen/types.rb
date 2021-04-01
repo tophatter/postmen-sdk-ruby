@@ -14,7 +14,7 @@ class Postmen
   ].freeze
   # This module holds all definitions of simple types used in the API
   module Types
-    include Dry::Types.module
+    include Dry.Types
 
     # Possible statuses for Rates.
     RateStatuses = Types::String.enum(

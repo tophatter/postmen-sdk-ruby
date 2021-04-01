@@ -7,6 +7,6 @@ class Postmen
     attribute :box_type, Types::String
     attribute :weight, Types::Strict::Nil | Types::Weight
     attribute :dimension, Types::Dimension
-    attribute :items, Types::Array.member(Types::Item)
+    attribute :items, Types::Array.of(Types::Item)
   end
 end

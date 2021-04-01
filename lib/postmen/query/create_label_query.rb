@@ -3,8 +3,6 @@ class Postmen
   # creating a Label. It does type convertion, removes empty values and so on.
   # @see LabelCollection#create Usage
   class CreateLabelQuery < Dry::Struct
-    constructor_type :strict_with_defaults
-
     attribute :service_type, Types::String
     attribute :shipper_account, Types::Reference
     attribute :shipment, Shipment
